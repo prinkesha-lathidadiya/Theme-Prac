@@ -1,0 +1,40 @@
+.register{
+    width: 32%;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+
+input{
+    background-color: #f5f8fa;
+    border-color: #f5f8fa;
+    color: #5e6278;
+    border: 1px solid white;
+    border-radius: 20px;
+    height: 57px;
+}
+.fl input{
+    width: 272px;
+}
+ a{
+    
+    text-decoration: none;
+    color: #009ef7;
+}
+.sign_head span a{
+    text-decoration: none;
+    color: #009ef7;;
+}
+.button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  
+}
+.button button{
+    border: 1px solid white;
+    border-radius: 13px;
+    padding: 9px 27px;
+}
+.span_error{
+    color: red;
+}

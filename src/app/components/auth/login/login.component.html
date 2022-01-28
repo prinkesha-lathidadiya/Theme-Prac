@@ -1,0 +1,38 @@
+<div class="container sign mt-5 shadow-lg p-1 mb-5 bg-white rounded">
+    <div class="row">
+        <div class="col p-5"> 
+            <h2 class="text-center">Sign In to Metronic</h2>
+            <div class=" sign_head text-center mt-3">
+            <span style="font-size: 25px; font-weight: 600; color: grey;"  >New Here? &nbsp;<a a [routerLink]="['/register']">Create on Account</a></span>
+            </div>
+            
+            <form class="form mt-5" [formGroup]="users">
+                   <div class="form-group sign_email">
+                <label class="email_input mb-1 " style="font-size: 22px; font-weight: 500;">Email</label>
+                <input      type="text" required formControlName="email" class="form-control" name="email" />
+                <span class="red span_error"
+                    *ngIf="!users.get('email')?.valid && users.get('email')?.touched && users.get('email')?.errors?.required">
+                    Email is required
+                </span>
+                <span class="span_error"
+                    *ngIf="!users.get('email')?.valid && users.get('email')?.touched && users.get('email')?.errors?.email">
+                    Please enter a valid email
+                </span>
+            </div>
+            <br>
+                <div class="form-group sign_email pass">
+                <label class="a mb-1" style="font-size: 22px; font-weight: 500; ">Password</label> <a href="" style="text-decoration: none;" a [routerLink]="['/forget-password']">Forgot Password?</a>
+                <input class="input" type="password" formControlName="password" class="form-control" name="password" />
+                <span class="span_error"
+                    *ngIf="!users.get('password')?.valid && users.get('password')?.touched && users.get('password')?.errors?.required">
+                    password is required
+                </span>
+            </div> <br>
+            <div class="Continue">
+                <a href="#" style="text-decoration: none; font-weight: 400;" a [routerLink]="['/app/dashboard']">Continue</a>
+            </div>
+               
+            </form>
+        </div>
+    </div>
+</div>

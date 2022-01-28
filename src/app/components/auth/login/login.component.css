@@ -1,0 +1,60 @@
+body{
+	margin: 0;
+}
+*, *::after, *::before{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.sign{
+    width: 30%;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+.sign_head span a{
+    text-decoration: none;
+    color: #009ef7;;
+}
+
+.sign_a span a{
+    
+    text-decoration: none;
+    color: #009ef7;
+}
+.sign_email input{
+    background-color: #f5f8fa;
+    border-color: #f5f8fa;
+    color: #5e6278;
+    border: 1px solid white;
+    border-radius: 20px;
+    height: 57px;
+}
+.span_error{
+    color: red;
+}
+.pass a{
+    font-size: 22px; 
+    font-weight: 500;
+    margin-left: 194px;
+}
+.btn_continue{
+    color: #009ef7;
+}
+span red{
+    color: red;
+}
+.Continue a{
+    border: 1px solid white;
+    border-radius: 25px;
+    background-color: #009ef7;
+    color: white;
+    display: inline-block;
+    height: 49px;
+    width: 468px;
+    font-size: 24px;
+    text-align: center;
+}
+/* .input input{
+    height: 54px;
+    border: none;
+} */

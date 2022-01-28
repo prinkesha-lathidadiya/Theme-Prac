@@ -1,0 +1,64 @@
+<div class="container register mt-5  shadow-lg p-3 mb-5 bg-white rounded">
+    <h2 style="text-align: center;">Create an Account</h2>
+        <div class=" sign_head text-center mt-3">
+    <span style="font-size: 25px; font-weight: 600; color: grey;"  >Already have an account? &nbsp;<a a [routerLink]="['/login']">Sign in here</a></span>
+        </div>
+    <form class="form mt-3" [formGroup]="user">
+        <div class="d-flex">
+            <div class="form-group fl">
+                <label style="font-size: 22px; font-weight: 500;">First Name </label>
+                <input type="text" formControlName="fname" class="form-control" name="fname" />
+                <span class="span_error"
+                    *ngIf="!user.get('fname')?.valid && user.get('fname')?.touched && user.get('fname')?.errors?.required">
+                    first name is required
+                </span>
+            </div>
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            <div class="form-group fl">
+                <label style="font-size: 22px; font-weight: 500;">Last Name</label>
+                <input type="text" formControlName="lastName" class="form-control" name="lastName" />
+                <span  class="span_error"
+                    *ngIf="!user.get('lastName')?.valid && user.get('lastName')?.touched && user.get('lastName')?.errors?.required">
+                    last Name is required
+                </span>
+            </div>
+           
+        </div>
+       <br>
+        <div class="form-group"
+        [ngClass]="{ 'form-invalid': !user.get('email')?.valid && user.get('email')?.touched }">
+        <label style="font-size: 22px; font-weight: 500;">Email</label>
+        <input type="text" required formControlName="email" class="form-control" name="email" />
+        <span class="span_error"
+            *ngIf="!user.get('email')?.valid && user.get('email')?.touched && user.get('email')?.errors?.required">
+            Email is required
+        </span>
+        <span class="span_error"
+            *ngIf="!user.get('email')?.valid && user.get('email')?.touched && user.get('email')?.errors?.email">
+            Please enter a valid email
+        </span>
+    </div>
+    <br>
+    <div class="form-group">
+        <label style="font-size: 22px; font-weight: 500;">Password</label>
+        <input type="password" formControlName="password" class="form-control" name="password" />
+        <span class="span_error"
+            *ngIf="!user.get('password')?.valid && user.get('password')?.touched && user.get('password')?.errors?.required">
+            password is required
+        </span>
+    </div> <br>
+    <div class="form-group">
+        <label style="font-size: 22px; font-weight: 500;">Confirm</label>
+        <input type="confirm" formControlName="confirm" class="form-control" name="confirm" />
+        <span class="span_error"
+            *ngIf="!user.get('confirm')?.valid && user.get('confirm')?.touched && user.get('confirm')?.errors?.required">
+            confirm is required
+        </span>
+    </div> <br>
+    <div class="button">
+    <button type="submit" class="btn btn-primary" style="font-size: 22px;">Submit</button> <br>
+
+    </div>
+    </form>
+</div>
+
